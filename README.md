@@ -1,0 +1,1 @@
+Welcome to the Atomic Simulations repository! This project contains computational models and simulations focused on the atomic behavior of hydrogen and argon under various conditions. The simulations aim to provide insights into the quantum mechanical and thermodynamic properties of these elements.
