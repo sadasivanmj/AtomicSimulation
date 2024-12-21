@@ -369,10 +369,10 @@ c	 ENDDO
 ! for all L's from L = 0, ..., Lmax : 
 	E=0
 C    	dE=0.0001
-       	OPEN(62,file='photo_e_enrgy.in')
+       	OPEN(62,file='photo_e_energy2.in')
 	OPEN(61,file='sigma.in')
 	DO iL=0,4988
-        READ(62, *) E
+        READ(62, *)E
 C        E=E+dE      
        kmom=DSQRT(2*E)
       CALL  sigma_arb(kmom, Lmax0, ZE, DeltaL)
