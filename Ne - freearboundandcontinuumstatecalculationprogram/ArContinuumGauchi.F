@@ -91,7 +91,7 @@
 
 ! The nuclear charge, we set it for H atom:
       
-      ZE = 18.D0 
+      ZE = 10.D0 
       
      
 ! Read in the iL, momentum and radial points need to be calculated: 

@@ -7,7 +7,7 @@ int main()
 {
 int i,l,n;
 double h=0.0010,d=0.001,r[60000],u[60000],w[60000],k[21000],D[6000],NumTD,DenTD,TD,DELTA,Kappa,U[60000],r1,r2,U1,U2,R1,R2,E[21000],sigma[21000],pie=3.14,huge,sum[2100],M,dum,dum2,R[60000];
-double fr,rsqr,Z=1,a1=8.069,a2=2.148,a3=-3.570,a4=1.986,a5=0.931,a6=0.602;
+double fr,rsqr,Z=2,a1=8.069,a2=2.148,a3=-3.570,a4=1.986,a5=0.931,a6=0.602;
 FILE *fp;FILE *fp2;
 FILE *fp3;
 FILE *fp4;
@@ -85,7 +85,7 @@ return (vr);
 double f(double r,double E, int l)
 {
 // Effective atomic no Z,
-double fr, vr,rsqr,M=1,Z=1,a1=8.069,a2=2.148;
+double fr, vr,rsqr,M=1,Z=2,a1=8.069,a2=2.148;
 double a3=-3.570,a4=1.986,a5=0.931,a6=0.602;
 double dum2;
 rsqr=r*r;

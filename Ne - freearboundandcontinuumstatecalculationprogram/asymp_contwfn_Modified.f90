@@ -14,7 +14,7 @@ program asymp_continuum_wfn
     h = 0.003
     d = 0.001
     E(1) = 0.01
-    Z = 18.0
+    Z = 10.0
     q = 1.0
 
     open(10, file = 'unormbwfn_total.dat', status = 'old', iostat = ios)

@@ -17,7 +17,7 @@ c	Rn & un are  unnonrmalized 3p,uf & Rf normalized continuum
 	h=0.003
         d=0.001				
 	E(1)=0.01
-	Z=18.0
+	Z=10.0
 	q=1.0
         Open   (10, FILE = 'unormbwfn_total.dat')
         Open   (34, FIlE = 'bwfn_unorm_3p.dat')

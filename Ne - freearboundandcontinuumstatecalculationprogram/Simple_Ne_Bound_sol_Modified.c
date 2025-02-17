@@ -1,29 +1,30 @@
 #include <stdio.h>
 #include <math.h>
 
-// Define the potential function v(r)
 double v(double r) {
-    return 0;  // Confinement potential set to zero
+  delta = 2.8; // a.u.
+  r_c = 6.7; //a.u.
+  if(r<=(r_c-0.5*delta)) && (r>=(r_c+0.5*delta){
+    return -0.30
+  }  
+  else{
+   return 0; 
+  }
 }
 
-// Define the function f(r, E, l) that represents the effective potential
 double f(double r, double E, int l) {
     double rsqr = r * r;
-    double M = 1, Z = 1;  // Effective nuclear charge Z = 2 for Neon in single-electron approximation
-    double a1 = 8.069, a2 = 2.148, a3 = -3.570, a4 = 1.986, a5 = 0.931, a6 = 0.602;
-
-    // Effective potential term
+    double M = 1, Z = 1;
+    double a1 = 16.039, a2 = 2.007, a3 = -25.543, a4 = 4.525, a5 = 0.961, a6 = 0.443;
     double dum2 = (Z + a1 * exp(-a2 * r) + a3 * r * exp(-a4 * r) + a5 * exp(-a6 * r)) / r;
-    
     return (v(r) - E) * 2 * M + (l * (l + 1) / rsqr) - (2 * M * dum2);
 }
 
 int main() {
     int i, l, n, preci = 0;
     double h = 0.003, d = 0.1, r[60000], u[60000], w[60000], R1[2000], R2[2000];
-    double U[60000], R[60000], r1, r2, U1, U2, E = -1.0, pie = 3.14;
+    double U[60000], R[60000], r1, r2, U1, U2, E = -0.8, pie = 3.14;
     double check = 0, dum, dum2;
-
     FILE *fp = fopen("final_bwfn_r_14au.in", "w");
     FILE *fp2 = fopen("unormbwfn_total.dat", "w");
 
@@ -32,7 +33,7 @@ int main() {
         return 1;
     }
 
-    l = 1;  // Angular momentum quantum number
+    l = 1;
     for (n = 0; n <= 1000; n++) {
         E += d;
         r[0] = 0.001;
@@ -88,3 +89,4 @@ int main() {
     fclose(fp2);
     return 0;
 }
+
